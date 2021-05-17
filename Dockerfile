@@ -1,6 +1,7 @@
-FROM python:3.8-slim
+FROM python:3.8-alpine
 
 
+RUN apk --no-cache add gcc musl-dev
 WORKDIR /usr/src/app
 
 COPY requirements.txt ./
